@@ -13,8 +13,9 @@
   <body>
     <h1>Welcome</h1>
     <p>This site is here to inform you that <span id="name">someone</span> is wrong.</p>
+    <p>hahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahaha</p>
     <script>
-      const personName = window.location.host.split('.')[0]
+      const personName = window.location.pathname.split('/').slice(1).map(w => `${w[0].toUpperCase()}${w.slice(1)}`).join(' ')
       document.querySelector('#name').textContent = personName[0].toUpperCase() + personName.slice(1)
     </script>
   </body>
